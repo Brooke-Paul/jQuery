@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+</head>
+<body>
+    父级页面引用了jquery，声明了全局函数hello，并且load子级界面
+</body>
+<script src="../js/jquery-1.11.0.min.js"></script>
+<script>
+    $(document).ready(function () {
+        $("body").load("children.html");
+    });
+
+    function hello() {
+        console.log("this is parent method");
+    }
+
+</script>
+
+
+</html>
