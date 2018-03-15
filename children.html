@@ -1,0 +1,12 @@
+<body>
+   子级页面引用父级函数时，直接引用jquery报错，必须使用 window.jQuery(浏览器中的全局变量里的jQuery) 或者直接不引用
+</body>
+
+<!--<script src="/js/jquery-1.11.0.js"></script>-->
+<script>window.jQuery || document.write('<script src="../js/jquery-1.11.0.js"><\/script>')</script>
+<script>
+    $(document).ready(function () {
+        hello();
+        console.log("this is children method");
+    });
+</script>
